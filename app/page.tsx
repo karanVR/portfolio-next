@@ -1,27 +1,14 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+import NavMenu from "@/components/nav-menu";
+import { ModeToggle } from "@/components/theme-button";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <main>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+      <div className="flex justify-between">
+        <Button className="p-4 m-4">login to see exclusive features</Button>
+        <ModeToggle className="m-2" />
+      </div>
     </main>
   );
 }
